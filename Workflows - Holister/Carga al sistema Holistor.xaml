@@ -1,0 +1,1591 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Carga_al_sistema_Holisster" this:Carga_al_sistema_Holisster.in_PRNVentasFileName="Sin título.jpg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_RepresentadoName" Type="InArgument(x:String)" />
+    <x:Property Name="In_BotLogFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="in_UserSheetName" Type="InArgument(x:String)" />
+    <x:Property Name="in_UserRow" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_ColHolistor" Type="InArgument(x:String)" />
+    <x:Property Name="in_MyDateMM" Type="InArgument(x:String)" />
+    <x:Property Name="in_MyDateyyyy" Type="InArgument(x:String)" />
+    <x:Property Name="in_CarpetaContribuyentesPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_PRNVentasFileName" Type="InArgument(x:String)" />
+    <x:Property Name="in_CargaRecibidos" Type="InArgument(x:String)" />
+    <x:Property Name="in_PRNComprasFileName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>660,4671.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Carga_al_sistema_Holisster_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Carga_al_sistema_Holister" sap:VirtualizedContainerService.HintSize="670.4,4606.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="FolderStepsArray" />
+      <Variable x:TypeArguments="x:String" Name="EsquemaVentas" />
+      <Variable x:TypeArguments="x:String" Name="EsquemaCompras" />
+      <Variable x:TypeArguments="x:String" Name="NetoVentas" />
+      <Variable x:TypeArguments="x:String" Name="NetoCompras" />
+      <Variable x:TypeArguments="x:String" Name="OpExentasVentas" />
+      <Variable x:TypeArguments="x:String" Name="ConcNGVentas" />
+      <Variable x:TypeArguments="x:String" Name="OpExentasCompras" />
+      <Variable x:TypeArguments="x:String" Name="ConcNGCompras" />
+      <Variable x:TypeArguments="x:String" Name="PercepVentas" />
+      <Variable x:TypeArguments="x:String" Name="PercepCompras" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="FOR TESTING" sap:VirtualizedContainerService.HintSize="608,64.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_RepresentadoName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Arial</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[In_BotLogFilePath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">["---- Bot Logs\Log 16-04-2024 00-30hs.xlsx"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_UserSheetName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Usuarios</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[in_UserRow]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_ColHolistor]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">M</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_MyDateMM]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">3</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_MyDateyyyy]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">2024</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_CarpetaContribuyentesPath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Clientes\Clientes2\Clientes3\</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_CargaRecibidos]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">True</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_PRNVentasFileName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Sin título.jpg</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_PRNComprasFileName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Sin título.jpg</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:MultipleAssign DisplayName="Variables necesarias holistor" sap:VirtualizedContainerService.HintSize="608,64.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[EsquemaVentas]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">16</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[EsquemaCompras]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">14</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[NetoVentas]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">V01</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[NetoCompras]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">CGG</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[OpExentasVentas]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">EXV</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[OpExentasCompras]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">EXC</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[ConcNGVentas]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">NGV</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[ConcNGCompras]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">NGV</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[PercepVentas]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[PercepCompras]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">PIBB</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: GelAnalyzer 19.1" sap:VirtualizedContainerService.HintSize="608,4388" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Pasos dentro de Holistor" sap:VirtualizedContainerService.HintSize="574.4,4073.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Ventana Holistor - 'Elegir datos del trabajo'" sap:VirtualizedContainerService.HintSize="512,64.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Elegir datos del trabajo'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="11, 69, 31, 34" CvType="Icon" DesignTimeRectangle="9, 67, 35, 38" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="516a65e8-9186-441e-a323-54ef3e3ec5eb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAmCAYAAABOFCLqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACXSURBVFhH7dLRCYAgFIVh99/A55ZoiHAUVzAUDBVvauH1UufAT9FDfkTKWuukJA+jtRbRhZGwDBM/F3fbfoQrMGVdGKXU68p31hrCPNkIiA1jjGmC/otpgdgxEeQrz2H9gWul50zH3A0YasBQA4YaMNSAoQYMNWCoAUPtO5gZped0YbiqYvzDVWUYCQWMzy/eryrDrJ1zJ2eGHnKftEONAAAAAElFTkSuQmCC" InformativeScreenshot="c1d5d3c585827afdea9178dbc64bec02.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtFrame' title='GelAnalyzer 19.1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Empresa'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[in_RepresentadoName]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="124, 313, 530, 25" CvType="InputBox" DesignTimeRectangle="124, 313, 530, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="10a164dd-712a-4483-a240-48eb573c08f6" InformativeScreenshot="36b7a7f27b43bd178824535f04a64cc4.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 320, 69, 13" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 320, 69, 13" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,134.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheckState DisplayName="Chequea si el usuario se encontró - Selector dinámico" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="14bb0b7e-e390-4740-bddd-86db8187c86c" Timeout="2" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Encontró al usuario" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="No encontró al usuario" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteCell Cell="[in_ColHolistor + in_UserRow.ToString]" DisplayName="LOG =&gt; Holistor X" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[in_UserSheetName]" Text="❌No se encontró el nombre del usuario en el sistema Holistor" WorkbookPath="[In_BotLogFilePath]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:WriteCell>
+                          <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Cierra Holistor" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="Excel">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:KillProcess>
+                          <Throw DisplayName="Tira &quot;Holistor Error&quot;" Exception="[new BusinessRuleException(&quot;Error Holistor&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="Throw_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Throw>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Período mes'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[in_MyDateMM]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="124, 313, 530, 25" CvType="InputBox" DesignTimeRectangle="124, 313, 530, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="9f305d91-308c-472a-9e82-3aa86ae9ca7c" InformativeScreenshot="f6515f436d8073bcd494d5b896e4aaf3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 320, 69, 13" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 320, 69, 13" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Período año'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[in_MyDateyyyy]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="124, 313, 530, 25" CvType="InputBox" DesignTimeRectangle="124, 313, 530, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="47b07d27-140e-448d-a273-f236d6c8bc26" InformativeScreenshot="f6515f436d8073bcd494d5b896e4aaf3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 320, 69, 13" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 320, 69, 13" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirmar'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="564, 397, 90, 33" CvTextArea="585, 406, 48, 15" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="564, 397, 90, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="b1135acc-0585-4e5c-b18b-0d39e3068ca2" InformativeScreenshot="0c87910fbcb2c11c52a5989447e07fcb.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click menú 'Útiles'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="52, 42, 56, 16" CvTextArgument="Analysis" CvType="Text" DesignTimeRectangle="52, 42, 56, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="91c97ccd-ce94-4099-b979-6f0335852d4d" InformativeScreenshot="12c6211be247225d0aa91b8a546f91ff.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtFrame' title='GelAnalyzer 19.1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Importar datos de otros sistemas'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="11, 69, 31, 34" CvType="Icon" DesignTimeRectangle="9, 67, 35, 38" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="9c09150f-413b-4ef6-b963-025d8edb57e4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAmCAYAAABOFCLqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACXSURBVFhH7dLRCYAgFIVh99/A55ZoiHAUVzAUDBVvauH1UufAT9FDfkTKWuukJA+jtRbRhZGwDBM/F3fbfoQrMGVdGKXU68p31hrCPNkIiA1jjGmC/otpgdgxEeQrz2H9gWul50zH3A0YasBQA4YaMNSAoQYMNWCoAUPtO5gZped0YbiqYvzDVWUYCQWMzy/eryrDrJ1zJ2eGHnKftEONAAAAAElFTkSuQmCC" InformativeScreenshot="c1d5d3c585827afdea9178dbc64bec02.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtFrame' title='GelAnalyzer 19.1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Ventana - 'Importar archivos desde otros sistemas'  *EMITIDOS" sap:VirtualizedContainerService.HintSize="512,64.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,140.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Doble tachado'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NCheck.Target>
+                        <uix:TargetAnchorable CvElementArea="40, 249, 18, 18" CvTextArea="64, 252, 87, 13" CvTextArgument="Doble tachado" CvType="CheckBox" DesignTimeRectangle="42, 250, 113, 21" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;wnd aaname='Fuente' cls='NetUIHWND' /&gt;&lt;ctrl name='Efectos' role='grouping' /&gt;&lt;ctrl name='Doble tachado' role='check box' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Fuente' cls='NetUIHWND' /&gt;&lt;ctrl name='Efectos' role='grouping' /&gt;&lt;ctrl name='Doble tachado' role='check box' automationid='' check:fulltext='Doble tachado' /&gt;" Guid="39da23d3-915b-40ef-9bff-6a65a437c32d" InformativeScreenshot="598abee0b9bcbe90ef06651fda274363.png" ScopeSelectorArgument="&lt;wnd app='powerpnt.exe' cls='NUIDialog' title='Fuente' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                      </uix:NCheck.Target>
+                    </uix:NCheck>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click selección 'Ventas' (option in comment out)" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="623, 52, 31, 31" CvType="Button" DesignTimeRectangle="623, 52, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="dae76a6b-d943-48b5-acd8-6b3514da4ce2" InformativeScreenshot="3c355c9e1f6af592a2bbd730cfbd1f55.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                        <uix:Target CvElementArea="593, 52, 31, 31" CvType="Button" DesignTimeRectangle="593, 52, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                        <uix:Target CvElementArea="637, 10, 18, 17" CvType="CloseButton" DesignTimeRectangle="637, 10, 18, 17" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IVA VENTAS'" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="593, 52, 31, 31" CvType="Button" DesignTimeRectangle="593, 52, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="66d1527c-3426-4a0a-a0af-4e320152a6c2" InformativeScreenshot="7dfec316c26fd685c63b4a7075739005.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                        <uix:Target CvElementArea="623, 52, 31, 31" CvType="Button" DesignTimeRectangle="623, 52, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                        <uix:Target CvElementArea="637, 10, 18, 17" CvType="CloseButton" DesignTimeRectangle="637, 10, 18, 17" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <Sequence DisplayName="Selección carpeta" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Int32" Name="FolderStepsLenght" />
+                  <Variable x:TypeArguments="x:Int32" Name="currentFolderIndex" />
+                  <Variable x:TypeArguments="x:String" Name="PRNFilePath" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign DisplayName="Path Archivo prn" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[PRNFilePath]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[in_CarpetaContribuyentesPath.ToString + in_PRNVentasFileName.ToString]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign DisplayName="Qué carpetas debe clickear?" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s:String[]">[FolderStepsArray]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s:String[]">[PRNFilePath.ToString.Split("\")]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Sequence DisplayName="Primera carpeta -&gt; Selecciona del menú" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar en'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="85, 51, 388, 35" CvType="InputBox" DesignTimeRectangle="85, 51, 388, 35" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="28bd3a66-7ee8-495c-bea7-f18690543d1e" InformativeScreenshot="a2ec718ae3e37a79c7fa455a0676fb5e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="23, 61, 49, 16" CvTextArgument="Look In:" CvType="Text" DesignTimeRectangle="23, 61, 49, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Carpeta' (dinámico)" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvTextArea="138, 135, 103, 18" CvTextArgument="[&quot;*&quot;+FolderStepsArray(0)+&quot;*&quot;]" CvType="Text" DesignTimeRectangle="138, 135, 103, 18" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="5e043fe3-cf16-4d1a-b904-5998b664bd9e" InformativeScreenshot="4b1a1a6b600eacc6ef3a67b66baeea6c.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[currentFolderIndex]" DisplayName="Siguientes carpetas -&gt; Busca tipeando" sap:VirtualizedContainerService.HintSize="449.6,255.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[FolderStepsArray]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:String">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:String" Name="currentFolder" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Qué hace para cada carpeta" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[currentFolderIndex &gt; 0]" DisplayName="Todas las que no son la primera" sap:VirtualizedContainerService.HintSize="449.6,260.8" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <Sequence DisplayName="Busca y abre cada carpeta" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Folder name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[currentFolder]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable CvElementArea="124, 313, 530, 25" CvType="InputBox" DesignTimeRectangle="124, 313, 530, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="e1f673a5-1985-4b8a-91f5-d9abca43f22c" InformativeScreenshot="e2d14299437061a2922158e49697821b.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CvTextArea="23, 320, 69, 13" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 320, 69, 13" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CvElementArea="470, 397, 89, 33" CvTextArea="495, 406, 38, 17" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="470, 397, 89, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="e447af3c-ca5b-48c6-be79-03858b97c29e" InformativeScreenshot="62de6208206e6925d322e5062870d51c.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Primer carpeta nada" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click/Check &quot;Borrar movimientos&quot;" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CvTextArea="159, 50, 83, 16" CvTextArgument="Dark on light" CvType="Text" DesignTimeRectangle="159, 50, 83, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="764155de-065d-4c28-9530-62077b5cc73c" InformativeScreenshot="6eda747f997fdbacc6dc395b8d3b0fc3.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvElementArea="136, 45, 19, 19" CvType="Icon" DesignTimeRectangle="134, 43, 23, 23" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHJSURBVEhL7ZTrS8JgFIf7u7t9qDAoilCLyjQzC9QumlEOS0JMM9K85GWWTVNjOp2UYFAffr0bKC23tQK/NXgYvNt53sPhxxnheR7D4l8uy6/krVYLTLmCJnnLff+OJnnwKg79pgujc2t9lswOUBcRNDhOtkZAVc5xTVgcXkwubuDQd4HEXV7sPJWlcXwWgs64hdnlbWTpB9l6VfmOxw/dsg3xwjOKbGcAutqG9cBPLjcjkWNQb7Yl9YryDOlmfH4dSboMtt1Vxe45x+yKHTXuReJQlO+6KVhcJ+i8vf8I/9oVx3N2GZM4FOU6ow2xNA2tTyAcg8G6J3HIytl6Q0xE4YklnX1oIlesYozUCCHoeWTlT9WaKM+XGmSmb5rIlepiTaX23Peodh7NlmVTIkc4+aitcwFh5sfBBHLVF004fWHMmxwSh6JcSIvR7kWq1P6R24cmpg02ckFE4lCUCzkfIzn3X98jVmypsu6kMGPcxjXdkDgU5QKrDkrsyB9nEKG5AUIZlvzjwwRZD6fRgnj2tV5Vni/XsWI/wsTCBkz7AbiDGVA3DDyhDCzuIKb0WwQbvOE80gyHQuUX8h5D2YrfGco+/ytDlPP4BAwljum1L2+0AAAAAElFTkSuQmCC" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Elegir o crear diseño&quot;" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CvElementArea="904, 42, 30, 28" CvType="Icon" DesignTimeRectangle="902, 40, 34, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="e70f9739-f69c-42e7-b439-ee2c9eee8bda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHFSURBVFhH7ZaxisJAEIZPRCxEREREJISUPoCllaWP4BNYWPgEIj6AtbVYWFpYW1iIWFpZWYiVGAsrsZjjH9hjs87FeHdRwil8CLv/bL6QZHY/BoMBua5Lr/55RPD/Kt4iJk8X2e/34vhTRY7HI1WrVXHuaSLn85lqtRplMhlx/v+IXC4Xpl6vUywWo2w2K+ZCFbler9RoNBhIgEKhIGZDE4FEs9n8ElAUi0UxH5pIu92+kQC2bYv5aInsdjtGmpPodDqiRD6fp+l0KtbcFRkOh/ysgTSv0+/3GUnCcRxaLpdiHfAVOZ1OvEAul2PQGc2MAuskEglGF6hUKsx2uxXrFL4i5nNWWZPxeEzJZNKTBegduBkg1elEQ6RcLnsWljasyWRCqVTKkwOtVot7iZn/Dl+Rbrd7c4HFYsFzs9mMwd6h5uLxOIM6c617+Irg7GDeLb6e1WrFrRqo8XQ6TaPRiDHXCYKvCND3CYBegDatj1mWRfP5XKwPSnRE8B7oFzXBC73ZbMTaR7grAlRT0gVwyAGHw0GseZRAIsgAJYEXVh14pPxPCCSCYx4olUrU6/XEzG+JlohivV6L43/BQyJh8hbx4tInqL12lGMWwJIAAAAASUVORK5CYII=" InformativeScreenshot="a78a7514ef66caaa2bc0bbd309c17e14.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+              </Sequence>
+            </Sequence>
+            <Sequence DisplayName="delete, only for testing" sap:VirtualizedContainerService.HintSize="512,64.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="****Click &quot;Elegir o crear diseño&quot;" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="904, 42, 30, 28" CvType="Icon" DesignTimeRectangle="902, 40, 34, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="e70f9739-f69c-42e7-b439-ee2c9eee8bda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHFSURBVFhH7ZaxisJAEIZPRCxEREREJISUPoCllaWP4BNYWPgEIj6AtbVYWFpYW1iIWFpZWYiVGAsrsZjjH9hjs87FeHdRwil8CLv/bL6QZHY/BoMBua5Lr/55RPD/Kt4iJk8X2e/34vhTRY7HI1WrVXHuaSLn85lqtRplMhlx/v+IXC4Xpl6vUywWo2w2K+ZCFbler9RoNBhIgEKhIGZDE4FEs9n8ElAUi0UxH5pIu92+kQC2bYv5aInsdjtGmpPodDqiRD6fp+l0KtbcFRkOh/ysgTSv0+/3GUnCcRxaLpdiHfAVOZ1OvEAul2PQGc2MAuskEglGF6hUKsx2uxXrFL4i5nNWWZPxeEzJZNKTBegduBkg1elEQ6RcLnsWljasyWRCqVTKkwOtVot7iZn/Dl+Rbrd7c4HFYsFzs9mMwd6h5uLxOIM6c617+Irg7GDeLb6e1WrFrRqo8XQ6TaPRiDHXCYKvCND3CYBegDatj1mWRfP5XKwPSnRE8B7oFzXBC73ZbMTaR7grAlRT0gVwyAGHw0GseZRAIsgAJYEXVh14pPxPCCSCYx4olUrU6/XEzG+JlohivV6L43/BQyJh8hbx4tInqL12lGMWwJIAAAAASUVORK5CYII=" InformativeScreenshot="a78a7514ef66caaa2bc0bbd309c17e14.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="****Click &quot;Elegir o crear diseño&quot;" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="904, 42, 30, 28" CvType="Icon" DesignTimeRectangle="902, 40, 34, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="e70f9739-f69c-42e7-b439-ee2c9eee8bda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHFSURBVFhH7ZaxisJAEIZPRCxEREREJISUPoCllaWP4BNYWPgEIj6AtbVYWFpYW1iIWFpZWYiVGAsrsZjjH9hjs87FeHdRwil8CLv/bL6QZHY/BoMBua5Lr/55RPD/Kt4iJk8X2e/34vhTRY7HI1WrVXHuaSLn85lqtRplMhlx/v+IXC4Xpl6vUywWo2w2K+ZCFbler9RoNBhIgEKhIGZDE4FEs9n8ElAUi0UxH5pIu92+kQC2bYv5aInsdjtGmpPodDqiRD6fp+l0KtbcFRkOh/ysgTSv0+/3GUnCcRxaLpdiHfAVOZ1OvEAul2PQGc2MAuskEglGF6hUKsx2uxXrFL4i5nNWWZPxeEzJZNKTBegduBkg1elEQ6RcLnsWljasyWRCqVTKkwOtVot7iZn/Dl+Rbrd7c4HFYsFzs9mMwd6h5uLxOIM6c617+Irg7GDeLb6e1WrFrRqo8XQ6TaPRiDHXCYKvCND3CYBegDatj1mWRfP5XKwPSnRE8B7oFzXBC73ZbMTaR7grAlRT0gVwyAGHw0GseZRAIsgAJYEXVh14pPxPCCSCYx4olUrU6/XEzG+JlohivV6L43/BQyJh8hbx4tInqL12lGMWwJIAAAAASUVORK5CYII=" InformativeScreenshot="a78a7514ef66caaa2bc0bbd309c17e14.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Icon'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="12, 69, 30, 33" CvType="Icon" DesignTimeRectangle="10, 67, 34, 37" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="295abecd-f9e1-47ea-89d2-b93d236b9563" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAlCAYAAAAnQjt6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACVSURBVFhH7dhbCoAgFIRh978Dn9tEiwiX4hYMBUUmyS54PNEM/AQ95Ef0lPHeBw3pgVhrg4YSRMMKpPW6JFrWLV0JyXUhxpjX4TNbXYY82R2MCMQ518X8D9LDiEIyJobniH2srepzhkLORgiOEBwhOEJwhOAIwRGCIwT3fciI6nO6EKkOkHhjVgWiofTrKi6/qjn5sANdvQdILQma2AAAAABJRU5ErkJggg==" InformativeScreenshot="fee77cf1775b8b52f5aec731e6012568.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtFrame' title='GelAnalyzer 19.1 - Sin título.jpg' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="138, 99, 65, 34" CvTextArea="160, 110, 21, 15" CvTextArgument="No" CvType="Button" DesignTimeRectangle="138, 99, 65, 34" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="a77ec893-3209-4287-a2e1-46cdcf70d747" InformativeScreenshot="92e3fba3360cc9e4b7c00eeb4c450781.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='GelAnalyzer 19.1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Ventana 'Esquema de diseño' *EMITIDOS" sap:VirtualizedContainerService.HintSize="512,568.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Esquema'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[EsquemaVentas]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Neto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[NetoVentas]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Operaciones exentas'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[OpExentasVentas]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Conceptos NG'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[ConcNGVentas]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Percepciones'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[PercepVentas]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <ui:CommentOut DisplayName="tecla esc, VOLVER A HABILITAR" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,288" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Tecla ESC" sap:VirtualizedContainerService.HintSize="353.6,201.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Importar'" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="623, 52, 32, 31" CvType="Button" DesignTimeRectangle="623, 52, 32, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="e5e5f5e8-fc18-405e-89d7-3c32820ac759" InformativeScreenshot="8c7e85033a9cb53d151c99549428c6af.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                        <uix:Target CvElementArea="593, 53, 31, 31" CvType="Button" DesignTimeRectangle="593, 53, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                        <uix:Target CvElementArea="636, 9, 18, 18" CvType="CloseButton" DesignTimeRectangle="636, 9, 18, 18" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Ventana agregar clientes *EMITIDOS" sap:VirtualizedContainerService.HintSize="512,2744" sap2010:WorkflowViewState.IdRef="Sequence_25">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="CUITAgregarClientes" />
+                <Variable x:TypeArguments="ui:Image" Name="TextScreenshot" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="ONLY TEST - DELETE" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="2324574594" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="ONLY TEST - DELETE" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="623, 52, 32, 31" CvType="Button" DesignTimeRectangle="623, 52, 32, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="e5e5f5e8-fc18-405e-89d7-3c32820ac759" InformativeScreenshot="8c7e85033a9cb53d151c99549428c6af.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                        <uix:Target CvElementArea="593, 53, 31, 31" CvType="Button" DesignTimeRectangle="593, 53, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                        <uix:Target CvElementArea="636, 9, 18, 18" CvType="CloseButton" DesignTimeRectangle="636, 9, 18, 18" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NGetText DisplayName="Get Text - 'CUIT'" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" TextString="[CUITAgregarClientes]" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="3f798c44-cd00-46c4-8684-b519f968b63f" InformativeScreenshot="b1e48d498521ecc9452b3dc0d2a84beb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uix:NTakeScreenshot DisplayName="Take Screenshot 'File Name'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="449.6,273.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[TextScreenshot]" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NTakeScreenshot.Target>
+                  <uix:TargetAnchorable CvElementArea="124, 313, 530, 25" CvType="InputBox" DesignTimeRectangle="124, 313, 530, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="018bbc07-1c2d-4a99-ba55-f92980825069" InformativeScreenshot="09985c88ff120cfa3f95e49f1d8f689e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTakeScreenshot.Target>
+              </uix:NTakeScreenshot>
+              <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Text by OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[TextScreenshot]" NoopExecution="False" Text="[CUITAgregarClientes]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="449.6,125.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[cInt(CUITAgregarClientes.replace(“[”,“”).substring(0,1)).ToString]" />
+              <uix:NTypeInto ClickBeforeMode="Single" DisplayName="Type into 'Cod postal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="1001000" Version="V3">
+                <uix:NTypeInto.ActivateBefore>
+                  <InArgument x:TypeArguments="x:Boolean">
+                    <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="True" />
+                  </InArgument>
+                </uix:NTypeInto.ActivateBefore>
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <If Condition="[cInt(CUITAgregarClientes.substring(0,1)) = 0]" DisplayName="¿RI o CF?" sap:VirtualizedContainerService.HintSize="449.6,834.4" sap2010:WorkflowViewState.IdRef="If_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence DisplayName="= 0 Es CF" sap:VirtualizedContainerService.HintSize="416,328" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into 'Cond fiscal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="CF" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Not 0 -&gt; Es RI" sap:VirtualizedContainerService.HintSize="416,328" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into 'Cond fiscal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="RI" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <ui:CommentOut DisplayName="tecla enter (HABILITAR!!)" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,506.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Tecla 'Enter'" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Tecla 'Esc'" sap:VirtualizedContainerService.HintSize="353.6,201.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(Esc)][u(hk)]" Version="V3" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirma traslado definitivo'" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="564, 397, 90, 33" CvTextArea="585, 406, 48, 15" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="564, 397, 90, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="7149ede3-0160-47ad-9955-9437d5063842" InformativeScreenshot="efd5f81bb5e9340fcdfade83cb4430a5.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trabajo terminado, ok'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="564, 397, 90, 33" CvTextArea="585, 406, 48, 15" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="564, 397, 90, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="7149ede3-0160-47ad-9955-9437d5063842" InformativeScreenshot="efd5f81bb5e9340fcdfade83cb4430a5.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <If Condition="[in_CargaRecibidos = &quot;True&quot;]" DisplayName="Si era RI, carga también los recibidos" sap:VirtualizedContainerService.HintSize="512,277.6" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence DisplayName="CARGA DE RECIBIDOS" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Ventana - 'Importar archivos desde otros sistemas'  *RECIBIDOS" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,140.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Doble tachado'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                            <uix:NCheck.Target>
+                              <uix:TargetAnchorable CvElementArea="40, 249, 18, 18" CvTextArea="64, 252, 87, 13" CvTextArgument="Doble tachado" CvType="CheckBox" DesignTimeRectangle="42, 250, 113, 21" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;wnd aaname='Fuente' cls='NetUIHWND' /&gt;&lt;ctrl name='Efectos' role='grouping' /&gt;&lt;ctrl name='Doble tachado' role='check box' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Fuente' cls='NetUIHWND' /&gt;&lt;ctrl name='Efectos' role='grouping' /&gt;&lt;ctrl name='Doble tachado' role='check box' automationid='' check:fulltext='Doble tachado' /&gt;" Guid="39da23d3-915b-40ef-9bff-6a65a437c32d" InformativeScreenshot="598abee0b9bcbe90ef06651fda274363.png" ScopeSelectorArgument="&lt;wnd app='powerpnt.exe' cls='NUIDialog' title='Fuente' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                            </uix:NCheck.Target>
+                          </uix:NCheck>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click selección 'Compras' (option in comment out)" sap:VirtualizedContainerService.HintSize="451.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="623, 52, 31, 31" CvType="Button" DesignTimeRectangle="623, 52, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="dae76a6b-d943-48b5-acd8-6b3514da4ce2" InformativeScreenshot="3c355c9e1f6af592a2bbd730cfbd1f55.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                              <uix:Target CvElementArea="593, 52, 31, 31" CvType="Button" DesignTimeRectangle="593, 52, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              <uix:Target CvElementArea="637, 10, 18, 17" CvType="CloseButton" DesignTimeRectangle="637, 10, 18, 17" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IVA COMPRAS'" sap:VirtualizedContainerService.HintSize="451.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_34" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="593, 52, 31, 31" CvType="Button" DesignTimeRectangle="593, 52, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="66d1527c-3426-4a0a-a0af-4e320152a6c2" InformativeScreenshot="7dfec316c26fd685c63b4a7075739005.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                              <uix:Target CvElementArea="623, 52, 31, 31" CvType="Button" DesignTimeRectangle="623, 52, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              <uix:Target CvElementArea="637, 10, 18, 17" CvType="CloseButton" DesignTimeRectangle="637, 10, 18, 17" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <Sequence DisplayName="Selección carpeta" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Int32" Name="FolderStepsLenght" />
+                        <Variable x:TypeArguments="x:Int32" Name="currentFolderIndex" />
+                        <Variable x:TypeArguments="x:String" Name="PRNFilePath" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="Path Archivo prn" sap:VirtualizedContainerService.HintSize="545.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[PRNFilePath]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[in_CarpetaContribuyentesPath.ToString + in_PRNComprasFileName.ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Qué carpetas debe clickear?" sap:VirtualizedContainerService.HintSize="545.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:String[]">[FolderStepsArray]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:String[]">[PRNFilePath.ToString.Split("\")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Sequence DisplayName="Primera carpeta -&gt; Selecciona del menú" sap:VirtualizedContainerService.HintSize="545.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar en'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_35" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvElementArea="85, 51, 388, 35" CvType="InputBox" DesignTimeRectangle="85, 51, 388, 35" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="28bd3a66-7ee8-495c-bea7-f18690543d1e" InformativeScreenshot="a2ec718ae3e37a79c7fa455a0676fb5e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="23, 61, 49, 16" CvTextArgument="Look In:" CvType="Text" DesignTimeRectangle="23, 61, 49, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Carpeta' (dinámico)" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_36" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvTextArea="138, 135, 103, 18" CvTextArgument="[&quot;*&quot;+FolderStepsArray(0)+&quot;*&quot;]" CvType="Text" DesignTimeRectangle="138, 135, 103, 18" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="5e043fe3-cf16-4d1a-b904-5998b664bd9e" InformativeScreenshot="4b1a1a6b600eacc6ef3a67b66baeea6c.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[currentFolderIndex]" DisplayName="Siguientes carpetas -&gt; Busca tipeando" sap:VirtualizedContainerService.HintSize="545.6,552.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[FolderStepsArray]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="x:String">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:String" Name="currentFolder" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Qué hace para cada carpeta" sap:VirtualizedContainerService.HintSize="512,347.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[currentFolderIndex &gt; 0]" DisplayName="Todas las que no son la primera" sap:VirtualizedContainerService.HintSize="449.6,260.8" sap2010:WorkflowViewState.IdRef="If_4">
+                                <If.Then>
+                                  <Sequence DisplayName="Busca y abre cada carpeta" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Folder name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[currentFolder]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable CvElementArea="124, 313, 530, 25" CvType="InputBox" DesignTimeRectangle="124, 313, 530, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="e1f673a5-1985-4b8a-91f5-d9abca43f22c" InformativeScreenshot="e2d14299437061a2922158e49697821b.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CvTextArea="23, 320, 69, 13" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 320, 69, 13" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable CvElementArea="470, 397, 89, 33" CvTextArea="495, 406, 38, 17" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="470, 397, 89, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="e447af3c-ca5b-48c6-be79-03858b97c29e" InformativeScreenshot="62de6208206e6925d322e5062870d51c.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Primer carpeta nada" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                      </ui:ForEach>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click/Check &quot;Borrar movimientos&quot;" sap:VirtualizedContainerService.HintSize="545.6,64.8" sap2010:WorkflowViewState.IdRef="NClick_38" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CvTextArea="159, 50, 83, 16" CvTextArgument="Dark on light" CvType="Text" DesignTimeRectangle="159, 50, 83, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="764155de-065d-4c28-9530-62077b5cc73c" InformativeScreenshot="6eda747f997fdbacc6dc395b8d3b0fc3.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CvElementArea="136, 45, 19, 19" CvType="Icon" DesignTimeRectangle="134, 43, 23, 23" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHJSURBVEhL7ZTrS8JgFIf7u7t9qDAoilCLyjQzC9QumlEOS0JMM9K85GWWTVNjOp2UYFAffr0bKC23tQK/NXgYvNt53sPhxxnheR7D4l8uy6/krVYLTLmCJnnLff+OJnnwKg79pgujc2t9lswOUBcRNDhOtkZAVc5xTVgcXkwubuDQd4HEXV7sPJWlcXwWgs64hdnlbWTpB9l6VfmOxw/dsg3xwjOKbGcAutqG9cBPLjcjkWNQb7Yl9YryDOlmfH4dSboMtt1Vxe45x+yKHTXuReJQlO+6KVhcJ+i8vf8I/9oVx3N2GZM4FOU6ow2xNA2tTyAcg8G6J3HIytl6Q0xE4YklnX1oIlesYozUCCHoeWTlT9WaKM+XGmSmb5rIlepiTaX23Peodh7NlmVTIkc4+aitcwFh5sfBBHLVF004fWHMmxwSh6JcSIvR7kWq1P6R24cmpg02ckFE4lCUCzkfIzn3X98jVmypsu6kMGPcxjXdkDgU5QKrDkrsyB9nEKG5AUIZlvzjwwRZD6fRgnj2tV5Vni/XsWI/wsTCBkz7AbiDGVA3DDyhDCzuIKb0WwQbvOE80gyHQuUX8h5D2YrfGco+/ytDlPP4BAwljum1L2+0AAAAAElFTkSuQmCC" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Elegir o crear diseño&quot;" sap:VirtualizedContainerService.HintSize="545.6,48" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CvElementArea="904, 42, 30, 28" CvType="Icon" DesignTimeRectangle="902, 40, 34, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="e70f9739-f69c-42e7-b439-ee2c9eee8bda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHFSURBVFhH7ZaxisJAEIZPRCxEREREJISUPoCllaWP4BNYWPgEIj6AtbVYWFpYW1iIWFpZWYiVGAsrsZjjH9hjs87FeHdRwil8CLv/bL6QZHY/BoMBua5Lr/55RPD/Kt4iJk8X2e/34vhTRY7HI1WrVXHuaSLn85lqtRplMhlx/v+IXC4Xpl6vUywWo2w2K+ZCFbler9RoNBhIgEKhIGZDE4FEs9n8ElAUi0UxH5pIu92+kQC2bYv5aInsdjtGmpPodDqiRD6fp+l0KtbcFRkOh/ysgTSv0+/3GUnCcRxaLpdiHfAVOZ1OvEAul2PQGc2MAuskEglGF6hUKsx2uxXrFL4i5nNWWZPxeEzJZNKTBegduBkg1elEQ6RcLnsWljasyWRCqVTKkwOtVot7iZn/Dl+Rbrd7c4HFYsFzs9mMwd6h5uLxOIM6c617+Irg7GDeLb6e1WrFrRqo8XQ6TaPRiDHXCYKvCND3CYBegDatj1mWRfP5XKwPSnRE8B7oFzXBC73ZbMTaR7grAlRT0gVwyAGHw0GseZRAIsgAJYEXVh14pPxPCCSCYx4olUrU6/XEzG+JlohivV6L43/BQyJh8hbx4tInqL12lGMWwJIAAAAASUVORK5CYII=" InformativeScreenshot="a78a7514ef66caaa2bc0bbd309c17e14.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                    </Sequence>
+                  </Sequence>
+                  <Sequence DisplayName="delete, only for testing" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="****Click &quot;Elegir o crear diseño&quot;" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_40" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="904, 42, 30, 28" CvType="Icon" DesignTimeRectangle="902, 40, 34, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="e70f9739-f69c-42e7-b439-ee2c9eee8bda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHFSURBVFhH7ZaxisJAEIZPRCxEREREJISUPoCllaWP4BNYWPgEIj6AtbVYWFpYW1iIWFpZWYiVGAsrsZjjH9hjs87FeHdRwil8CLv/bL6QZHY/BoMBua5Lr/55RPD/Kt4iJk8X2e/34vhTRY7HI1WrVXHuaSLn85lqtRplMhlx/v+IXC4Xpl6vUywWo2w2K+ZCFbler9RoNBhIgEKhIGZDE4FEs9n8ElAUi0UxH5pIu92+kQC2bYv5aInsdjtGmpPodDqiRD6fp+l0KtbcFRkOh/ysgTSv0+/3GUnCcRxaLpdiHfAVOZ1OvEAul2PQGc2MAuskEglGF6hUKsx2uxXrFL4i5nNWWZPxeEzJZNKTBegduBkg1elEQ6RcLnsWljasyWRCqVTKkwOtVot7iZn/Dl+Rbrd7c4HFYsFzs9mMwd6h5uLxOIM6c617+Irg7GDeLb6e1WrFrRqo8XQ6TaPRiDHXCYKvCND3CYBegDatj1mWRfP5XKwPSnRE8B7oFzXBC73ZbMTaR7grAlRT0gVwyAGHw0GseZRAIsgAJYEXVh14pPxPCCSCYx4olUrU6/XEzG+JlohivV6L43/BQyJh8hbx4tInqL12lGMWwJIAAAAASUVORK5CYII=" InformativeScreenshot="a78a7514ef66caaa2bc0bbd309c17e14.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="****Click &quot;Elegir o crear diseño&quot;" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="904, 42, 30, 28" CvType="Icon" DesignTimeRectangle="902, 40, 34, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="e70f9739-f69c-42e7-b439-ee2c9eee8bda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHFSURBVFhH7ZaxisJAEIZPRCxEREREJISUPoCllaWP4BNYWPgEIj6AtbVYWFpYW1iIWFpZWYiVGAsrsZjjH9hjs87FeHdRwil8CLv/bL6QZHY/BoMBua5Lr/55RPD/Kt4iJk8X2e/34vhTRY7HI1WrVXHuaSLn85lqtRplMhlx/v+IXC4Xpl6vUywWo2w2K+ZCFbler9RoNBhIgEKhIGZDE4FEs9n8ElAUi0UxH5pIu92+kQC2bYv5aInsdjtGmpPodDqiRD6fp+l0KtbcFRkOh/ysgTSv0+/3GUnCcRxaLpdiHfAVOZ1OvEAul2PQGc2MAuskEglGF6hUKsx2uxXrFL4i5nNWWZPxeEzJZNKTBegduBkg1elEQ6RcLnsWljasyWRCqVTKkwOtVot7iZn/Dl+Rbrd7c4HFYsFzs9mMwd6h5uLxOIM6c617+Irg7GDeLb6e1WrFrRqo8XQ6TaPRiDHXCYKvCND3CYBegDatj1mWRfP5XKwPSnRE8B7oFzXBC73ZbMTaR7grAlRT0gVwyAGHw0GseZRAIsgAJYEXVh14pPxPCCSCYx4olUrU6/XEzG+JlohivV6L43/BQyJh8hbx4tInqL12lGMWwJIAAAAASUVORK5CYII=" InformativeScreenshot="a78a7514ef66caaa2bc0bbd309c17e14.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='New analysis' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Icon'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="12, 69, 30, 33" CvType="Icon" DesignTimeRectangle="10, 67, 34, 37" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="295abecd-f9e1-47ea-89d2-b93d236b9563" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAlCAYAAAAnQjt6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACVSURBVFhH7dhbCoAgFIRh978Dn9tEiwiX4hYMBUUmyS54PNEM/AQ95Ef0lPHeBw3pgVhrg4YSRMMKpPW6JFrWLV0JyXUhxpjX4TNbXYY82R2MCMQ518X8D9LDiEIyJobniH2srepzhkLORgiOEBwhOEJwhOAIwRGCIwT3fciI6nO6EKkOkHhjVgWiofTrKi6/qjn5sANdvQdILQma2AAAAABJRU5ErkJggg==" InformativeScreenshot="fee77cf1775b8b52f5aec731e6012568.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtFrame' title='GelAnalyzer 19.1 - Sin título.jpg' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_43" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="138, 99, 65, 34" CvTextArea="160, 110, 21, 15" CvTextArgument="No" CvType="Button" DesignTimeRectangle="138, 99, 65, 34" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="a77ec893-3209-4287-a2e1-46cdcf70d747" InformativeScreenshot="92e3fba3360cc9e4b7c00eeb4c450781.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='GelAnalyzer 19.1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                  <Sequence DisplayName="Ventana 'Esquema de diseño' *RECIBIDOS" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Esquema'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[EsquemaCompras]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Neto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[NetoCompras]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Operaciones exentas'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[OpExentasCompras]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Conceptos NG'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[ConcNGCompras]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Percepciones'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="[PercepCompras]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="123, 313, 531, 25" CvType="InputBox" DesignTimeRectangle="123, 313, 531, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="ab163c90-bec7-4828-8b4c-d3a19ab65339" InformativeScreenshot="78898dc38526018ad95c5789b69892af.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Tecla ESC" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Importar'" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="NClick_44" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="623, 52, 32, 31" CvType="Button" DesignTimeRectangle="623, 52, 32, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="e5e5f5e8-fc18-405e-89d7-3c32820ac759" InformativeScreenshot="8c7e85033a9cb53d151c99549428c6af.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                              <uix:Target CvElementArea="593, 53, 31, 31" CvType="Button" DesignTimeRectangle="593, 53, 31, 31" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              <uix:Target CvElementArea="636, 9, 18, 18" CvType="CloseButton" DesignTimeRectangle="636, 9, 18, 18" ElementType="Button" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                  <Sequence DisplayName="Ventana agregar clientes *RECIBIDOS" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="CUITAgregarClientes" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="ONLY TEST - DELETE" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="2324574594" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NGetText DisplayName="Get Text - 'CUIT'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" TextString="[CUITAgregarClientes]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="3f798c44-cd00-46c4-8684-b519f968b63f" InformativeScreenshot="b1e48d498521ecc9452b3dc0d2a84beb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <ui:CommentOut DisplayName="Comment Out - ocr text" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,262.4" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DesignTimeScaleFactor="{x:Null}" ScrollOffset="{x:Null}" DisplayName="CV Get Text" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_2" NumberOfScrolls="2" RefreshBefore="True" ScrollDirection="Down" Version="V6" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into 'Cod postal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_27" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="1001000" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <If Condition="[cInt(CUITAgregarClientes.substring(0,1)) = 0]" DisplayName="¿RI o CF?" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="If_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="= 0 Es CF" sap:VirtualizedContainerService.HintSize="416,328" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into 'Cond fiscal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="CF" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Not 0 -&gt; Es RI" sap:VirtualizedContainerService.HintSize="416,328" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into 'Cond fiscal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Text="RI" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable CvElementArea="122, 313, 532, 25" CvType="InputBox" DesignTimeRectangle="122, 313, 532, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b002e858-c65e-4d0f-916f-99aacf3f998d" InformativeScreenshot="a0d1e60c9fc6cb083da4bab0e0bdd077.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvTextArea="23, 318, 69, 16" CvTextArgument="File Name:" CvType="Text" DesignTimeRectangle="23, 318, 69, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:CommentOut DisplayName="tecla enter (HABILITAR!!)" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,506.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Tecla 'Enter'" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Tecla 'Esc'" sap:VirtualizedContainerService.HintSize="353.6,201.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][k(Esc)][u(hk)]" Version="V3" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirma traslado definitivo'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_45" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="564, 397, 90, 33" CvTextArea="585, 406, 48, 15" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="564, 397, 90, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="7149ede3-0160-47ad-9955-9437d5063842" InformativeScreenshot="efd5f81bb5e9340fcdfade83cb4430a5.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trabajo terminado, ok'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c43a7a8-fd2e-4b90-883d-806bcc4184d8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="564, 397, 90, 33" CvTextArea="585, 406, 48, 15" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="564, 397, 90, 33" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="7149ede3-0160-47ad-9955-9437d5063842" InformativeScreenshot="efd5f81bb5e9340fcdfade83cb4430a5.png" ScopeSelectorArgument="&lt;wnd app='gelanalyzer.exe' cls='SunAwtDialog' title='Open' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Si era MT, nada más" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="512,159.2" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="Holistor.exe" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" FilePath="C:\Program Files\GelAnalyzer\gelanalyzer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADgSURBVFhH7dOxCcJAGIbhbGHvGI5hb+sAgkNYOIClvYVNBhAcwsbeLSJC3u775XJJ7g/Hf/BU+ThfIWnixFnaeX+6zlOfYZ/faLXeuBgUyD8qJSvwenuauFg9w5BNnYEl1Rm4P5xMXJxiuzua2MwWqN4rsFFhYJMVmEKFQe0tswVOJQL/Ue8e2GQFqo8DXHy+3E1sVBjYuAamyAosKQLHcg1sHy8Tm6xA9XGAi9UzsFFhYOMamCIrsKQIHGu2QPXugY36OMCmzkD1o+DiqdQZWFJ9gR6SAz31GXHiLOQ0zRdrvh0Aj2Nj5gAAAABJRU5ErkJggg==" InformativeScreenshot="f3efa9f8b88ceea23daa6a6f136b99ce.png" Selector="&lt;wnd app='gelanalyzer.exe' cls='SunAwtFrame' title='GelAnalyzer 19.1' /&gt;" Title="GelAnalyzer 19.1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,561 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "In_BotLogFilePath",
+        "InOut_RecibidosFileName",
+        "InOut_EmitidosFileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "UserPassword",
+        "UserCUIL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Descarga Emitidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "EmitidosFileName&Sequence_28"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "EmitidosFileName",
+        "RepresentadoMonthFolderPath",
+        "varRepresentadoCUIL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Descarga Recibidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "RecibidosFileName",
+        "RepresentadoMonthFolderPath",
+        "varRepresentadoCUIL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel Emitidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtEmitidos&Sequence_1",
+        "dtRowRange&Sequence_1",
+        "dtRowCount&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "EmitidosFileName",
+        "RepresentadoMonthFolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel Recibidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtRecibidos&Sequence_1",
+        "dtRowCount&Sequence_1",
+        "dtRowRange&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "RecibidosFileName",
+        "RepresentadoMonthFolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel Recibidos--.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtRange&Sequence_1",
+        "dtrangetext&Sequence_1",
+        "dtRowCount&Sequence_1",
+        "dtRowRange&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "RepresentadoMonthFolderPath",
+        "EmitidosFileName",
+        "RecibidosFileName",
+        "argument1"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Web/Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TextExtracted&Sequence_14",
+        "WordsInfo&Sequence_14",
+        "captcha&Sequence_15",
+        "BotDetectedBtn&Sequence_15",
+        "ChsnBtn&Sequence_39",
+        "TextExtracted&Sequence_40",
+        "WordsInfo&Sequence_40",
+        "captcha&Sequence_41",
+        "BotDetectedBtn&Sequence_41",
+        "ChsnBtn&Sequence_26",
+        "TextExtracted&Sequence_27",
+        "WordsInfo&Sequence_27",
+        "captcha&Sequence_28",
+        "BotDetectedBtn&Sequence_28",
+        "ChsnBtn&Sequence_16",
+        "BotDetectedBtn&Sequence_10",
+        "captcha&Sequence_10",
+        "WordsInfo&Sequence_4",
+        "TextExtracted&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_UserCUIL",
+        "in_UserPassword",
+        "in_UserSheetName",
+        "in_BotLogFilePath",
+        "in_UserRow",
+        "in_ColLogin",
+        "in_urlAFIPLogin",
+        "in_ColFinished"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Web/Descarga Emitidos y recibidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CheckRepresentado&Sequence_141",
+        "ExcelFromCSVSheet&Sequence_142",
+        "dtHeaders&Sequence_142",
+        "ChsnBtn&TryCatch_3",
+        "CheckRepresentado&Sequence_91",
+        "ExcelFromCSVSheet&Sequence_92",
+        "dtHeaders&Sequence_92",
+        "CheckRepresentado&Sequence_61",
+        "ExcelFromCSVSheet&Sequence_62",
+        "dtHeaders&Sequence_62",
+        "ChsnBtn&TryCatch_2",
+        "ChsnBtn&TryCatch_1",
+        "FileCSVExists&Sequence_29",
+        "FileExists&Sequence_29",
+        "stringExtractedCSVFile&Sequence_29",
+        "datatableExtractedCSVFile&Sequence_29",
+        "localresExtractedCSVFile&Sequence_29",
+        "ExistantCellValue&Sequence_29",
+        "CheckRepresentado&Sequence_48",
+        "dtHeaders&Sequence_46",
+        "ExcelFromCSVSheet&Sequence_46"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_RecibidosFileName",
+        "InOut_HWCRTemplatePath",
+        "InOut_HWCRSheetName",
+        "InOut_HWCRFileName",
+        "InOut_MyDateMMyyyy",
+        "InOut_ColPrn",
+        "InOut_HWVTTemplatePath",
+        "InOut_HWVTSheetName",
+        "InOut_HWVTFileName",
+        "InOut_RepresentadoIndex",
+        "InOut_DobleRepresentado",
+        "InOut_DescargaRecibidos",
+        "InOut_RepresentadoCUIL",
+        "InOut_RepresentadoMonthFolderPath",
+        "InOut_Desktop",
+        "InOut_ColFinished",
+        "InOut_ColLogin",
+        "InOut_BotLogFilePath",
+        "InOut_UserSheetName",
+        "InOut_ColDownload",
+        "InOut_UserRow",
+        "Out_EmitidosFileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Excel/Excel Emitidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExistantCellValue&Sequence_1",
+        "TemplateFileExists&Sequence_1",
+        "PrnFileExists&Sequence_1",
+        "ToPrintFileExist&Sequence_1",
+        "dtConversionTipoDoc&Sequence_36",
+        "TipoDoc&Sequence_36",
+        "TipoMoneda&Sequence_1",
+        "dtConversionTipoMoneda&Sequence_1",
+        "TipoFactura&Sequence_1",
+        "dtConversionTipoFactura&Sequence_1",
+        "dtEmitidos&Sequence_1",
+        "dtRowCount&Sequence_1",
+        "dtRowRange&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_DescargaRecibidos",
+        "in_ColPrn",
+        "In_RepresentadoCUIL",
+        "in_UserRow",
+        "in_UserSheetName",
+        "In_BotLogFilePath",
+        "In_MyDate",
+        "In_HWVTFileName",
+        "In_HWVTTemplatePath",
+        "In_HWVTSheetName",
+        "In_EmitidosFileName",
+        "In_RepresentadoMonthFolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Excel/Excel Recibidos.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExistantCellValue&Sequence_1",
+        "ToPrintFileExist&Sequence_1",
+        "PrnFileExists&Sequence_1",
+        "TemplateFileExists&Sequence_51",
+        "TipoMoneda&Sequence_33",
+        "dtConversionTipoMoneda&Sequence_33",
+        "TipoFactura&Sequence_33",
+        "dtConversionTipoFactura&Sequence_33",
+        "TipoDoc&Sequence_33",
+        "dtConversionTipoDoc&Sequence_33",
+        "dtRecibidos&Sequence_1",
+        "dtRowCount&Sequence_1",
+        "dtRowRange&Sequence_1",
+        "ColumnZ&Sequence_1",
+        "dtHWCRwithValues&Sequence_1",
+        "ColumnZValue&Sequence_1",
+        "CurrentRowIndex&Sequence_1",
+        "dtRowCountOriginalFile&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ColPrn",
+        "in_UserSheetName",
+        "in_UserRow",
+        "In_RepresentadoCUIL",
+        "In_BotLogFilePath",
+        "In_MyDate",
+        "In_HWCRSheetName",
+        "In_HWCRTemplatePath",
+        "In_HWCRFileName",
+        "In_RecibidosFileName",
+        "In_RepresentadoMonthFolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Carga al sistema Holisster.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Holister/Carga al sistema Holistor.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TextScreenshot&Sequence_25",
+        "FolderStepsLenght&Sequence_32",
+        "currentFolderIndex&Sequence_32",
+        "PRNFilePath&Sequence_32",
+        "CUITAgregarClientes&Sequence_33",
+        "CUITAgregarClientes&Sequence_25",
+        "PercepCompras&Sequence_1",
+        "PercepVentas&Sequence_1",
+        "ConcNGCompras&Sequence_1",
+        "OpExentasCompras&Sequence_1",
+        "ConcNGVentas&Sequence_1",
+        "OpExentasVentas&Sequence_1",
+        "NetoCompras&Sequence_1",
+        "NetoVentas&Sequence_1",
+        "EsquemaCompras&Sequence_1",
+        "EsquemaVentas&Sequence_1",
+        "PRNFilePath&Sequence_17",
+        "currentFolderIndex&Sequence_17",
+        "FolderStepsLenght&Sequence_17",
+        "FolderStepsArray&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_PRNComprasFileName",
+        "in_CargaRecibidos",
+        "in_PRNVentasFileName",
+        "in_CarpetaContribuyentesPath",
+        "in_MyDateyyyy",
+        "in_MyDateMM",
+        "in_ColHolistor",
+        "in_UserRow",
+        "in_UserSheetName",
+        "In_BotLogFilePath",
+        "in_RepresentadoName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TipoDoc&Sequence_1",
+        "TipoMoneda&Sequence_1",
+        "dtConversionTipoDoc&Sequence_1",
+        "dtConversionTipoMoneda&Sequence_1",
+        "TipoFactura&Sequence_1",
+        "dtConversionTipoFactura&Sequence_1",
+        "dtRowRange&Sequence_1",
+        "dtRowCount&Sequence_1",
+        "value&Sequence_1",
+        "dtnumeros&Sequence_1",
+        "csvFound&Sequence_1",
+        "Rowindex&Sequence_1",
+        "dtEmitidos&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExcelFromCSVSheet&Sequence_3",
+        "dtHeaders&Sequence_1",
+        "stringExtractedCSVFile&Sequence_1",
+        "datatableExtractedCSVFile&Sequence_1",
+        "sistemfileExtractedCSVFile&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test3.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "In_Disco&Sequence_2",
+        "Out_EmitidosFileName&Sequence_2",
+        "EmitidosFileName&Sequence_2",
+        "datatableExtractedCSVFile&Sequence_2",
+        "localresExtractedCSVFile&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "argument1"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test 4.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "In_RepresentadoCUIL&Sequence_1",
+        "CheckRepresentado&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test bot detection.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ModifiedImage&Sequence_1",
+        "ScreenshotCaptchaPath&Sequence_1",
+        "ScreenshotCaptchaImage&Sequence_1",
+        "DownloadedImage&Sequence_1",
+        "TextOCR&Sequence_1",
+        "ResultOCR&Sequence_1",
+        "CaptchaImage&Sequence_1",
+        "ImagesFound&Sequence_1",
+        "ImageCaptchaURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test bot detection - Copy (1).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ImageCaptchaURL&Sequence_1",
+        "ImagesFound&Sequence_1",
+        "CaptchaImage&Sequence_1",
+        "ResultOCR&Sequence_1",
+        "TextOCR&Sequence_1",
+        "DownloadedImage&Sequence_1",
+        "ScreenshotCaptchaImage&Sequence_1",
+        "ScreenshotCaptchaPath&Sequence_1",
+        "ModifiedImage&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test csv.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "datatableExtractedCSVFile&Sequence_7",
+        "stringExtractedCSVFile&Sequence_7",
+        "localresExtractedCSVFile&Sequence_7",
+        "texto&Sequence_1",
+        "exists&Sequence_1",
+        "Out_EmitidosFileName&Sequence_1",
+        "ExcelFromCSVSheet&Sequence_6",
+        "dtHeaders&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Init/Workflow segundo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CarpetaContribuyentesPathExists&Sequence_49",
+        "MyDateMM&Sequence_1",
+        "MyDateyyyy&Sequence_1",
+        "DesktopPath&Sequence_1",
+        "DownloadFolderPath&Sequence_1",
+        "MyDateMMyyyy&Sequence_1",
+        "BotLogFilePath&Sequence_1",
+        "MonthFolderExists&Sequence_1",
+        "prueba&Sequence_1",
+        "BotLogFolderPath&Sequence_1",
+        "ProcesosAbiertos&Sequence_1",
+        "arrUserRepresentadosOK&Sequence_14",
+        "MonthFolderExists&Sequence_23",
+        "UserSheetName&Sequence_1",
+        "UserListPath&Sequence_1",
+        "UserPassword&Sequence_1",
+        "UserCUIL&Sequence_1",
+        "UserName&Sequence_1",
+        "SiMismo&Sequence_1",
+        "dtRepresentados&Sequence_1",
+        "CarpetaContribuyentesPath&Sequence_1",
+        "RepresentadoFolderExists&Sequence_1",
+        "RepresentadoMonthFolder&Sequence_1",
+        "RepresentadoCUIL&Sequence_1",
+        "RepresentadoName&Sequence_1",
+        "RepresentadoMonthFolderPath&Sequence_1",
+        "HWCRTemplatePath&Sequence_1",
+        "HWVTTemplatePath&Sequence_1",
+        "HWCRFileName&Sequence_1",
+        "HWVTFileName&Sequence_1",
+        "HWCRSheetName&Sequence_1",
+        "HWVTSheetName&Sequence_1",
+        "EsRInscripto&Sequence_1",
+        "TextoFacturasB&Sequence_1",
+        "RepresentadoIndex&Sequence_1",
+        "RepresentadoDescargaRecibidos&Sequence_1",
+        "DobleRepresentado&Sequence_1",
+        "dtRepreRowCount&Sequence_1",
+        "UserIndex&Sequence_1",
+        "BotLogTemplatePath&Sequence_1",
+        "dtBotLogHeaders&Sequence_1",
+        "ColLogin&Sequence_1",
+        "ColDownload&Sequence_1",
+        "ColPrn&Sequence_1",
+        "ColHolistor&Sequence_1",
+        "ColFinished&Sequence_1",
+        "UserRow&Sequence_1",
+        "Desktop&Sequence_1",
+        "urlAFIPLogin&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_BotLogFilePath",
+        "In_dtUsers",
+        "InOut_EmitidosFileName",
+        "InOut_RecibidosFileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "prueba.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_ColDownload",
+        "in_ColPrn",
+        "in_UserRow",
+        "In_RepresentadoCUIL",
+        "in_UserSheetName",
+        "In_BotLogFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows - Init/Workflow primero.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "OptionsArray&Sequence_52",
+        "CarpetaContribuyentesPath&Sequence_52",
+        "Desktop&Sequence_52",
+        "MyDate&Sequence_52",
+        "UserSheetName&Sequence_52",
+        "UserListPath&Sequence_52",
+        "BotLogFolderPath&Sequence_52",
+        "LastLogFilePath&Sequence_52",
+        "dtLastLog&Sequence_52",
+        "LastLogDate&Sequence_52",
+        "NewBot&Sequence_52",
+        "LastLogTotalUsers&Sequence_52",
+        "valor&Sequence_52",
+        "LastLogOKUsers&Sequence_52",
+        "dtLastLogOKUsers&Sequence_52",
+        "dtLastLogEmptyUsers&Sequence_52",
+        "LastLogEmptyUsers&Sequence_52",
+        "info&Sequence_52",
+        "LogFilesExists&Sequence_52",
+        "dtLastLogErrorUsers&Sequence_52",
+        "LastLogErrorUsers&Sequence_52",
+        "TextCorrectos&Sequence_52",
+        "TextErrores&Sequence_52",
+        "TextEmpty&Sequence_52",
+        "TextTodosCorrectos&Sequence_52",
+        "DECISION&Sequence_52",
+        "TextFinal&Sequence_52",
+        "InicioNuevoBot&Sequence_52",
+        "dtUsers&Sequence_52",
+        "BtnInicioBot&Sequence_52",
+        "BtnPostModif&Sequence_52",
+        "RowIndex&Sequence_52"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "InOut_EmitidosFileName",
+        "InOut_RecibidosFileName",
+        "In_BotLogFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
