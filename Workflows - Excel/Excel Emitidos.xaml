@@ -918,7 +918,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dtEmitidos]" DisplayName="Escribir valores data table en Holistor template" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[In_HWVTSheetName]" WorkbookPath="[In_RepresentadoMonthFolderPath + &quot;\&quot; + In_HWVTFileName]" />
+          <ui:WriteRange AddHeaders="False" DataTable="[dtEmitidos]" DisplayName="Escribir valores data table en Holistor template" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[In_HWVTSheetName]" StartingCell="A3" WorkbookPath="[In_RepresentadoMonthFolderPath + &quot;\&quot; + In_HWVTFileName]" />
         </Sequence>
       </If.Else>
     </If>

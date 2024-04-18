@@ -500,15 +500,12 @@
     {
       "Path": "prueba.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [
-        "in_ColDownload",
-        "in_ColPrn",
-        "in_UserRow",
-        "In_RepresentadoCUIL",
-        "in_UserSheetName",
-        "In_BotLogFilePath"
+      "VariablesSectionElementsOrder": [
+        "ColumnZValue&Sequence_1",
+        "CurrentRowIndex&Sequence_1",
+        "dtHWCRwithValues&Sequence_1"
       ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
