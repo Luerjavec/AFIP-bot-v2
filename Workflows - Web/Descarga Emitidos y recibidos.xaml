@@ -23,7 +23,7 @@
     <x:Property Name="InOut_HWCRTemplatePath" Type="InOutArgument(x:String)" />
     <x:Property Name="Out_RecibidosFileName" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>730.4,1560.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1580,5956</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -154,7 +154,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Descarga emitidos" sap:VirtualizedContainerService.HintSize="740.8,1496" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence DisplayName="Descarga emitidos" sap:VirtualizedContainerService.HintSize="1590.4,5891.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ExistantCellValue" />
       <Variable x:TypeArguments="upr:ILocalResource[]" Name="localresExtractedCSVFile" />
@@ -168,32 +168,32 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="TC - Mis comprobantes emitidos FIRST" sap:VirtualizedContainerService.HintSize="678.4,1407.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="TC - Mis comprobantes emitidos FIRST" sap:VirtualizedContainerService.HintSize="1528,5802.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="ChsnBtn" />
       </TryCatch.Variables>
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Página mis comprobantes (emitidos) -- Private tab" sap:VirtualizedContainerService.HintSize="641.6,1129.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Página mis comprobantes (emitidos) -- Private tab" sap:VirtualizedContainerService.HintSize="1491.2,5524.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Qué hacer dentro navegador - Descarga emitidos" sap:VirtualizedContainerService.HintSize="608,912.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+              <Sequence DisplayName="Qué hacer dentro navegador - Descarga emitidos" sap:VirtualizedContainerService.HintSize="1457.6,5308" sap2010:WorkflowViewState.IdRef="Sequence_34">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Descarga EMITIDOS" sap:VirtualizedContainerService.HintSize="545.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence DisplayName="Descarga EMITIDOS" sap:VirtualizedContainerService.HintSize="1395.2,2099.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGoToUrl DisplayName="Ir al centro de selección" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://fes.afip.gob.ar/mcmp/jsp/seleccionIngreso.do?s" Version="V3">
+                  <uix:NGoToUrl DisplayName="Ir al centro de selección" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://fes.afip.gob.ar/mcmp/jsp/seleccionIngreso.do?s" Version="V3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -201,7 +201,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NGoToUrl>
-                  <uix:NCheckState DisplayName="Check si aparecen empresas para seleccionar" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Timeout="2" Version="V3">
+                  <uix:NCheckState DisplayName="Check si aparecen empresas para seleccionar" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Timeout="2" Version="V3">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Hay empresas para seleccionar" sap:VirtualizedContainerService.HintSize="449.6,316.8" sap2010:WorkflowViewState.IdRef="Sequence_49">
                         <sap:WorkflowViewStateService.ViewState>
@@ -325,7 +325,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Emitidos&quot;" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Emitidos&quot;" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/setearContribuyente.do?idContribuyente=0" DesignTimeRectangle="384, 857, 556, 116" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='panel-body' parentid='btnEmitidos' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='panel-body' parentid='btnEmitidos' tag='DIV' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Emitidos&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Comprobantes Emitidos' /&gt;" Guid="1564b6ea-7389-4f5e-8f10-d640e2eac028" InformativeScreenshot="d6b02ae307c746f3b0981c7c421c5278.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -342,7 +342,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fecha del Comprobante *'" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fecha del Comprobante *'" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="400, 661, 1135, 73" CvType="InputBox" DesignTimeRectangle="432, 665, 1102, 68" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='fechaEmision' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fechaEmision' tag='INPUT' type='text' class='form-control' aaname='Fecha del Comprobante *' /&gt;" Guid="5f2f59e3-8d7b-4e02-a1fb-cd6f22def489" InformativeScreenshot="0b5e50acaffe22965c2ea0fa6e722be2.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -359,7 +359,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mes Pasado'" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mes Pasado'" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="1210, 997, 203, 38" CvTextArea="1225, 1009, 91, 16" CvTextArgument="Mes Pasado" CvType="Button" DesignTimeRectangle="1211, 1001, 200, 33" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li' idx='7' isleaf='1' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' isleaf='1' tag='LI' aaname='Mes Pasado' check:innerText='Mes Pasado' /&gt;" Guid="3ef8438b-250c-49a5-b109-e1615964e07b" InformativeScreenshot="24f9b40067706029ad207650f9ca307c.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -370,7 +370,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="383, 715, 1153, 73" CvTextArea="917, 742, 81, 18" CvTextArgument="BUSCAR" CvType="Button" DesignTimeRectangle="384, 719, 1150, 68" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='buscarComprobantes' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buscarComprobantes' tag='BUTTON' type='submit' class='btn btn-primary col-xs-12' aaname='Buscar' check:innerText='BUSCAR' /&gt;" Guid="86e97ed5-489c-48e0-91eb-4a66647caf9e" InformativeScreenshot="73d3964eb2a684dcafd25c507ad2f39f.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -381,15 +381,15 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="¿Descarga excel o CSV?" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                  <uix:NCheckState DisplayName="¿Descarga excel o CSV?" sap:VirtualizedContainerService.HintSize="1236.8,1465.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Aparece Excel" sap:VirtualizedContainerService.HintSize="512,443.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                      <Sequence DisplayName="Aparece Excel" sap:VirtualizedContainerService.HintSize="592,862.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="OJO, setear que pregunte dónde se guardan" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="449.6,108.8" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="OJO, setear que pregunte dónde se guardan" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="529.6,108.8" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="382, 711, 69, 43" CvTextArea="396, 724, 42, 17" CvTextArgument="Excel" CvType="Button" DesignTimeRectangle="397, 721, 42, 24" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='SPAN' type='' class='' aaname='Excel' check:innerText='Excel' /&gt;" Guid="5e9d7aa0-a471-4f85-87d9-07e0275a9921" InformativeScreenshot="bbb66e41982044139ddf929e1fc195c4.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -407,7 +407,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_EmitidosFileName]" Version="V3">
+                        <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_EmitidosFileName]" Version="V3">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable CvElementArea="166, 451, 774, 28" CvType="InputBox" DesignTimeRectangle="169, 455, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="3b841405-0a2d-40df-abc5-97c68c47d5f6" InformativeScreenshot="9e6433b97d087dac650ecd34365bf050.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                           </uix:NGetText.Target>
@@ -418,17 +418,59 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NGetText>
-                        <Sequence DisplayName="Si el archivo ya existe, lo borra" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                        <If Condition="[Out_EmitidosFileName.contains(&quot;xls&quot;)]" DisplayName="Si NO tiene la extensión, se la pone" sap:VirtualizedContainerService.HintSize="529.6,419.2" sap2010:WorkflowViewState.IdRef="If_39">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="Si la tiene, nada" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_167">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Si no la tiene, la agrega" sap:VirtualizedContainerService.HintSize="496,191.2" sap2010:WorkflowViewState.IdRef="Sequence_168">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Agrega extensión .xlsx" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[Out_EmitidosFileName]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[Out_EmitidosFileName + ".xlsx"]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <Sequence DisplayName="Si el archivo ya existe, lo borra" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:FileExistsX DisplayName="File Exists" Exists="[FileExists]" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[InOut_RepresentadoMonthFolderPath.ToString + &quot;\&quot; + Out_EmitidosFileName]">
+                          <ui:FileExistsX DisplayName="File Exists" Exists="[FileExists]" sap:VirtualizedContainerService.HintSize="387.2,174.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[InOut_RepresentadoMonthFolderPath.ToString + &quot;\&quot; + Out_EmitidosFileName]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -441,10 +483,10 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Existe =&gt; Lo borra" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                              <Sequence DisplayName="Existe =&gt; Lo borra" sap:VirtualizedContainerService.HintSize="416,190.4" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -463,7 +505,7 @@
                             </If.Else>
                           </If>
                         </Sequence>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="False" DisplayName="Escribe la carpeta del representado" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Text="[InOut_RepresentadoMonthFolderPath.ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="False" DisplayName="Escribe la carpeta del representado" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Text="[InOut_RepresentadoMonthFolderPath.ToString + &quot;[k(enter)]&quot;]" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="144, 45, 574, 28" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;wnd ctrlid='1001' title='Dirección: *' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1001' title='Dirección: *' check:text='Dirección: Descargas' /&gt;" Guid="21cc8220-5fef-4cf7-a86b-7d9d1fa4b6a8" ImageBase64="" InformativeScreenshot="1ab5d35cf39768aac83f2a55974093fd.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -483,7 +525,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NTypeInto>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" sap:VirtualizedContainerService.HintSize="529.6,49.6" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CvElementArea="695, 541, 110, 34" CvTextArea="721, 550, 56, 15" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="696, 543, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='&amp;amp;Guardar' /&gt;" Guid="1442c9da-0952-4e8b-9dac-e0e5af4983be" InformativeScreenshot="1928dfa273967e63a842616ae7c6ec39.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -497,13 +539,13 @@
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Sin excel, solo CSV" sap:VirtualizedContainerService.HintSize="512,788" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                      <Sequence DisplayName="Sin excel, solo CSV" sap:VirtualizedContainerService.HintSize="592,1207.2" sap2010:WorkflowViewState.IdRef="Sequence_42">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CSV'" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CSV'" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" DesignTimeRectangle="384, 763, 60, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='BUTTON' type='' class='btn btn-default btn-defaut btn-sm sinborde' aaname='Exportar como CSV' check:innerText='CSV' /&gt;" Guid="db226f39-268b-46dd-9515-a9b8f404a910" InformativeScreenshot="eea0a1ecdb73e3660b1e9d0e7220b3e3.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -520,7 +562,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_EmitidosFileName]" Version="V3">
+                        <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_EmitidosFileName]" Version="V3">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable CvElementArea="166, 451, 774, 28" CvType="InputBox" DesignTimeRectangle="169, 455, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="3b841405-0a2d-40df-abc5-97c68c47d5f6" InformativeScreenshot="9e6433b97d087dac650ecd34365bf050.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                           </uix:NGetText.Target>
@@ -531,7 +573,49 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NGetText>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                        <If Condition="[Out_EmitidosFileName.contains(&quot;xls&quot;)]" DisplayName="Si NO tiene la extensión, se la pone" sap:VirtualizedContainerService.HintSize="529.6,419.2" sap2010:WorkflowViewState.IdRef="If_40">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="Si la tiene, nada" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_169">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Si no la tiene, la agrega" sap:VirtualizedContainerService.HintSize="496,191.2" sap2010:WorkflowViewState.IdRef="Sequence_170">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Agrega extensión .xlsx" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[Out_EmitidosFileName]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[Out_EmitidosFileName + ".xlsx"]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -539,7 +623,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -547,7 +631,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -555,7 +639,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -563,7 +647,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -571,7 +655,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta (h/desktop)" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta (h/desktop)" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -579,7 +663,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <Sequence DisplayName="Si el archivo zip ya existe, lo borra" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                        <Sequence DisplayName="Si el archivo zip ya existe, lo borra" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -624,7 +708,7 @@
                             </If.Else>
                           </If>
                         </Sequence>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter (guardar)" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter (guardar)" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -632,7 +716,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NKeyboardShortcuts>
-                        <Delay DisplayName="DELAY PARA DESCARGA" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Delay_3">
+                        <Delay DisplayName="DELAY PARA DESCARGA" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="529.6,49.6" sap2010:WorkflowViewState.IdRef="Delay_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -653,12 +737,12 @@
                     </uix:NCheckState.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <Delay DisplayName="DELAY PARA DESCARGA" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="Delay_2">
+                  <Delay DisplayName="DELAY PARA DESCARGA" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="Delay_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -666,7 +750,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Delay>
-                  <If Condition="[Out_EmitidosFileName.Contains(&quot;zip&quot;)]" DisplayName="Si era CSV, descomprimir ZIP y cambiar formato" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[Out_EmitidosFileName.Contains(&quot;zip&quot;)]" DisplayName="Si era CSV, descomprimir ZIP y cambiar formato" sap:VirtualizedContainerService.HintSize="1236.8,49.6" sap2010:WorkflowViewState.IdRef="If_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -865,44 +949,20 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel Emitidos - Invoke Workflow File (Workflows - Excel\Excel Emitidos.xaml)" sap:VirtualizedContainerService.HintSize="545.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows - Excel\Excel Emitidos.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel Emitidos - Invoke Workflow File (Workflows - Excel\Excel Emitidos.xaml)" sap:VirtualizedContainerService.HintSize="1395.2,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows - Excel\Excel Emitidos.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoMonthFolderPath">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_RepresentadoMonthFolderPath" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_EmitidosFileName">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_EmitidosFileName" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_HWVTFileName">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_HWVTFileName" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_HWVTTemplatePath">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_HWVTTemplatePath" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_HWVTSheetName">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_HWVTSheetName" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_MyDate">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_MyDateMMyyyy" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_BotLogFilePath">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_BotLogFilePath" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_UserSheetName">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_UserSheetName" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="in_UserRow">
-                      <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="InOut_UserRow" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoCUIL">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_RepresentadoCUIL" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_ColPrn">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_ColPrn" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="In_DescargaRecibidos">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_DescargaRecibidos" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoMonthFolderPath">[InOut_RepresentadoMonthFolderPath]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_EmitidosFileName">[Out_EmitidosFileName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_HWVTFileName">[InOut_HWVTFileName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_HWVTTemplatePath">[InOut_HWVTTemplatePath]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_HWVTSheetName">[InOut_HWVTSheetName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_MyDate">[InOut_MyDateMMyyyy]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_BotLogFilePath">[InOut_BotLogFilePath]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_UserSheetName">[InOut_UserSheetName]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_UserRow">[InOut_UserRow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoCUIL">[InOut_RepresentadoCUIL]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_ColPrn">[InOut_ColPrn]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="In_DescargaRecibidos">[InOut_DescargaRecibidos]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -911,7 +971,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
-                <If Condition="[InOut_DescargaRecibidos = &quot;False&quot;]" DisplayName="Check si hay que seguir descargando recibidos" sap:VirtualizedContainerService.HintSize="545.6,606.4" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[InOut_DescargaRecibidos = &quot;False&quot;]" DisplayName="Check si hay que seguir descargando recibidos" sap:VirtualizedContainerService.HintSize="1395.2,2967.2" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -977,21 +1037,21 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Si descarga recibidos =&gt; Deja ventana para recibidos (nada)" sap:VirtualizedContainerService.HintSize="512,393.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                    <Sequence DisplayName="Si descarga recibidos =&gt; Deja ventana para recibidos (nada)" sap:VirtualizedContainerService.HintSize="1361.6,2754.4" sap2010:WorkflowViewState.IdRef="Sequence_36">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Descarga Recibidos" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_160">
+                      <Sequence DisplayName="Descarga Recibidos" sap:VirtualizedContainerService.HintSize="1299.2,2425.6" sap2010:WorkflowViewState.IdRef="Sequence_160">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGoToUrl DisplayName="Ir al centro de selección" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_9" Url="https://fes.afip.gob.ar/mcmp/jsp/seleccionIngreso.do?s" Version="V3">
+                        <uix:NGoToUrl DisplayName="Ir al centro de selección" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_9" Url="https://fes.afip.gob.ar/mcmp/jsp/seleccionIngreso.do?s" Version="V3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -999,7 +1059,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NGoToUrl>
-                        <uix:NCheckState DisplayName="Check si aparecen empresas para seleccionar" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NCheckState DisplayName="Check si aparecen empresas para seleccionar" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NCheckState.IfExists>
                             <Sequence DisplayName="Hay empresas para seleccionar" sap:VirtualizedContainerService.HintSize="449.6,316.8" sap2010:WorkflowViewState.IdRef="Sequence_143">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1131,7 +1191,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NCheckState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Recibidos&quot;" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_40" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Recibidos&quot;" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_40" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/setearContribuyente.do?idContribuyente=0" DesignTimeRectangle="977, 857, 556, 116" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='panel-body' parentid='btnRecibidos' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='panel-body' parentid='btnRecibidos' tag='DIV' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Recibidos&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Comprobantes Recibidos' /&gt;" Guid="c680b813-5724-41dc-bf1f-aaf22f5e96ef" InformativeScreenshot="593036d6bc068ebfd288de2fa6b9bc73.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -1148,7 +1208,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fecha del Comprobante *'" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fecha del Comprobante *'" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="400, 661, 1135, 73" CvType="InputBox" DesignTimeRectangle="432, 665, 1102, 68" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='fechaEmision' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fechaEmision' tag='INPUT' type='text' class='form-control' aaname='Fecha del Comprobante *' /&gt;" Guid="5f2f59e3-8d7b-4e02-a1fb-cd6f22def489" InformativeScreenshot="0b5e50acaffe22965c2ea0fa6e722be2.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -1165,7 +1225,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mes Pasado'" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mes Pasado'" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="1210, 997, 203, 38" CvTextArea="1225, 1009, 91, 16" CvTextArgument="Mes Pasado" CvType="Button" DesignTimeRectangle="1211, 1001, 200, 33" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li' idx='7' isleaf='1' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' isleaf='1' tag='LI' aaname='Mes Pasado' check:innerText='Mes Pasado' /&gt;" Guid="3ef8438b-250c-49a5-b109-e1615964e07b" InformativeScreenshot="24f9b40067706029ad207650f9ca307c.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -1176,7 +1236,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NClick_43" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="NClick_43" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="383, 715, 1153, 73" CvTextArea="917, 742, 81, 18" CvTextArgument="BUSCAR" CvType="Button" DesignTimeRectangle="384, 719, 1150, 68" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='buscarComprobantes' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buscarComprobantes' tag='BUTTON' type='submit' class='btn btn-primary col-xs-12' aaname='Buscar' check:innerText='BUSCAR' /&gt;" Guid="86e97ed5-489c-48e0-91eb-4a66647caf9e" InformativeScreenshot="73d3964eb2a684dcafd25c507ad2f39f.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -1187,15 +1247,15 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NCheckState DisplayName="¿Descarga excel o CSV?" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                        <uix:NCheckState DisplayName="¿Descarga excel o CSV?" sap:VirtualizedContainerService.HintSize="1236.8,1795.2" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                           <uix:NCheckState.IfExists>
-                            <Sequence DisplayName="Aparece excel" sap:VirtualizedContainerService.HintSize="512,443.2" sap2010:WorkflowViewState.IdRef="Sequence_149">
+                            <Sequence DisplayName="Aparece excel" sap:VirtualizedContainerService.HintSize="592,995.2" sap2010:WorkflowViewState.IdRef="Sequence_149">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="OJO, setear que pregunte dónde se guardan" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="449.6,108.8" sap2010:WorkflowViewState.IdRef="NClick_44" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                              <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="OJO, setear que pregunte dónde se guardan" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="529.6,108.8" sap2010:WorkflowViewState.IdRef="NClick_44" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" CvElementArea="382, 711, 69, 43" CvTextArea="396, 724, 42, 17" CvTextArgument="Excel" CvType="Button" DesignTimeRectangle="397, 721, 42, 24" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='SPAN' type='' class='' aaname='Excel' check:innerText='Excel' /&gt;" Guid="5e9d7aa0-a471-4f85-87d9-07e0275a9921" InformativeScreenshot="bbb66e41982044139ddf929e1fc195c4.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -1213,7 +1273,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NClick>
-                              <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_RecibidosFileName]" Version="V3">
+                              <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="529.6,197.6" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_RecibidosFileName]" Version="V3">
                                 <uix:NGetText.Target>
                                   <uix:TargetAnchorable CvElementArea="166, 451, 774, 28" CvType="InputBox" DesignTimeRectangle="169, 560, 846, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:*' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:*' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="3b841405-0a2d-40df-abc5-97c68c47d5f6" ImageBase64="" InformativeScreenshot="cc748b4ae25f2363f09cddb8a138bae1.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -1225,12 +1285,54 @@
                                 </uix:NGetText.Target>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NGetText>
-                              <Sequence DisplayName="Si el archivo ya existe, lo borra" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_148">
+                              <If Condition="[Out_RecibidosFileName.contains(&quot;xls&quot;)]" DisplayName="Si NO tiene la extensión, se la pone" sap:VirtualizedContainerService.HintSize="529.6,419.2" sap2010:WorkflowViewState.IdRef="If_37">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Sequence DisplayName="Si la tiene, nada" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_164">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Si no la tiene, la agrega" sap:VirtualizedContainerService.HintSize="496,191.2" sap2010:WorkflowViewState.IdRef="Sequence_163">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign DisplayName="Agrega extensión .xlsx" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[Out_RecibidosFileName]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[Out_RecibidosFileName + ".xlsx"]</InArgument>
+                                      </Assign.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <Sequence DisplayName="Si el archivo ya existe, lo borra" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_148">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1275,7 +1377,7 @@
                                   </If.Else>
                                 </If>
                               </Sequence>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="False" DisplayName="Escribe carpeta del representado" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Text="[InOut_RepresentadoMonthFolderPath.ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="False" DisplayName="Escribe carpeta del representado" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Text="[InOut_RepresentadoMonthFolderPath.ToString + &quot;[k(enter)]&quot;]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable DesignTimeRectangle="144, 45, 574, 28" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;wnd ctrlid='1001' title='Dirección: *' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1001' title='Dirección: *' check:text='Dirección: *' /&gt;" Guid="21cc8220-5fef-4cf7-a86b-7d9d1fa4b6a8" ImageBase64="" InformativeScreenshot="1ab5d35cf39768aac83f2a55974093fd.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -1295,7 +1397,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NTypeInto>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="NClick_45" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" sap:VirtualizedContainerService.HintSize="529.6,49.6" sap2010:WorkflowViewState.IdRef="NClick_45" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable CvElementArea="695, 541, 110, 34" CvTextArea="721, 550, 56, 15" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="696, 543, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='&amp;amp;Guardar' /&gt;" Guid="1442c9da-0952-4e8b-9dac-e0e5af4983be" InformativeScreenshot="1928dfa273967e63a842616ae7c6ec39.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                                 </uix:NClick.Target>
@@ -1309,13 +1411,13 @@
                             </Sequence>
                           </uix:NCheckState.IfExists>
                           <uix:NCheckState.IfNotExists>
-                            <Sequence DisplayName="Sin excel, solo CSV" sap:VirtualizedContainerService.HintSize="512,1077.6" sap2010:WorkflowViewState.IdRef="Sequence_153">
+                            <Sequence DisplayName="Sin excel, solo CSV" sap:VirtualizedContainerService.HintSize="592,1496.8" sap2010:WorkflowViewState.IdRef="Sequence_153">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CSV'" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CSV'" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://fes.afip.gob.ar/mcmp/jsp/comprobantesEmitidos.do" DesignTimeRectangle="384, 763, 60, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tablaDataTables_wrapper' tag='BUTTON' type='' class='btn btn-default btn-defaut btn-sm sinborde' aaname='Exportar como CSV' check:innerText='CSV' /&gt;" Guid="db226f39-268b-46dd-9515-a9b8f404a910" InformativeScreenshot="eea0a1ecdb73e3660b1e9d0e7220b3e3.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Mis Comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -1332,7 +1434,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NClick>
-                              <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_RecibidosFileName]" Version="V3">
+                              <uix:NGetText DisplayName="Guarda nombre del archivo" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" TextString="[Out_RecibidosFileName]" Version="V3">
                                 <uix:NGetText.Target>
                                   <uix:TargetAnchorable CvElementArea="166, 451, 774, 28" CvType="InputBox" DesignTimeRectangle="169, 455, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="3b841405-0a2d-40df-abc5-97c68c47d5f6" InformativeScreenshot="9e6433b97d087dac650ecd34365bf050.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Ingrese nombre de archivo a guardar…' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
                                 </uix:NGetText.Target>
@@ -1343,7 +1445,49 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NGetText>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_30" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                              <If Condition="[Out_RecibidosFileName.contains(&quot;xls&quot;)]" DisplayName="Si NO tiene la extensión, se la pone" sap:VirtualizedContainerService.HintSize="529.6,419.2" sap2010:WorkflowViewState.IdRef="If_38">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Sequence DisplayName="Si la tiene, nada" sap:VirtualizedContainerService.HintSize="416,22.4" sap2010:WorkflowViewState.IdRef="Sequence_165">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Si no la tiene, la agrega" sap:VirtualizedContainerService.HintSize="496,191.2" sap2010:WorkflowViewState.IdRef="Sequence_166">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign DisplayName="Agrega extensión .xlsx" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[Out_RecibidosFileName]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[Out_RecibidosFileName + ".xlsx"]</InArgument>
+                                      </Assign.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_30" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1351,7 +1495,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NKeyboardShortcuts>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_31" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_31" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1359,7 +1503,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NKeyboardShortcuts>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_32" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_32" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1367,7 +1511,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NKeyboardShortcuts>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_33" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_33" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1375,7 +1519,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NKeyboardShortcuts>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_34" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_34" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1383,7 +1527,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NKeyboardShortcuts>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta (h/desktop)" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_35" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Sube de carpeta (h/desktop)" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_35" ScopeIdentifier="52ee7414-c7f0-4ece-875f-27ad0cac085c" Shortcuts="[d(hk)][d(alt)][k(Up)][u(alt)][u(hk)]" Version="V3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1391,7 +1535,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NKeyboardShortcuts>
-                              <Sequence DisplayName="Si el archivo zip ya existe, lo borra" sap:VirtualizedContainerService.HintSize="449.6,354.4" sap2010:WorkflowViewState.IdRef="Sequence_152">
+                              <Sequence DisplayName="Si el archivo zip ya existe, lo borra" sap:VirtualizedContainerService.HintSize="529.6,354.4" sap2010:WorkflowViewState.IdRef="Sequence_152">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1465,12 +1609,12 @@
                           </uix:NCheckState.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NCheckState>
-                        <Delay DisplayName="Delay para descarga" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="387.2,64.8" sap2010:WorkflowViewState.IdRef="Delay_10">
+                        <Delay DisplayName="Delay para descarga" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1236.8,64.8" sap2010:WorkflowViewState.IdRef="Delay_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1478,7 +1622,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </Delay>
-                        <If Condition="[Out_RecibidosFileName.Contains(&quot;zip&quot;)]" DisplayName="Si era CSV, descomprimir ZIP y cambiar formato" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="If_32">
+                        <If Condition="[Out_RecibidosFileName.Contains(&quot;zip&quot;)]" DisplayName="Si era CSV, descomprimir ZIP y cambiar formato" sap:VirtualizedContainerService.HintSize="1236.8,48" sap2010:WorkflowViewState.IdRef="If_32">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1681,39 +1825,17 @@
                       </Sequence>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Edita excel de recibidos y obtiene PRN" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows - Excel\Excel Recibidos.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoMonthFolderPath">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_RepresentadoMonthFolderPath" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_RecibidosFileName">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_RecibidosFileName" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_HWCRFileName">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_HWCRFileName" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_HWCRTemplatePath">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_HWCRTemplatePath" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_HWCRSheetName">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_HWCRSheetName" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_MyDate">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_MyDateMMyyyy" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_BotLogFilePath">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_BotLogFilePath" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoCUIL">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_RepresentadoCUIL" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="in_UserRow">
-                            <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="InOut_UserRow" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_UserSheetName">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_UserSheetName" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_ColPrn">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InOut_ColPrn" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoMonthFolderPath">[InOut_RepresentadoMonthFolderPath]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_RecibidosFileName">[Out_RecibidosFileName]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_HWCRFileName">[InOut_HWCRFileName]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_HWCRTemplatePath">[InOut_HWCRTemplatePath]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_HWCRSheetName">[InOut_HWCRSheetName]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_MyDate">[InOut_MyDateMMyyyy]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_BotLogFilePath">[InOut_BotLogFilePath]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_RepresentadoCUIL">[InOut_RepresentadoCUIL]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="in_UserRow">[InOut_UserRow]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_UserSheetName">[InOut_UserSheetName]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_ColPrn">[InOut_ColPrn]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
