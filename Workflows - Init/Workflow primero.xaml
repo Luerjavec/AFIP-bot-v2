@@ -4,7 +4,7 @@
     <x:Property Name="InOut_RecibidosFileName" Type="OutArgument(x:String)" />
     <x:Property Name="In_BotLogFilePath" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>839.2,4345.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>839.2,4220</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,7 +133,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Secuencia workflow primero" sap:VirtualizedContainerService.HintSize="849.6,4280.8" sap2010:WorkflowViewState.IdRef="Sequence_109">
+  <Sequence DisplayName="Secuencia workflow primero" sap:VirtualizedContainerService.HintSize="849.6,4155.2" sap2010:WorkflowViewState.IdRef="Sequence_109">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,7 +147,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence DisplayName="Inicia y busca logs viejos" sap:VirtualizedContainerService.HintSize="787.2,4127.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
+    <Sequence DisplayName="Inicia y busca logs viejos" sap:VirtualizedContainerService.HintSize="787.2,4001.6" sap2010:WorkflowViewState.IdRef="Sequence_52">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="CarpetaContribuyentesPath" />
         <Variable x:TypeArguments="x:String" Name="Desktop" />
@@ -819,7 +819,7 @@
           </Sequence>
         </If.Else>
       </If>
-      <If Condition="[InicioNuevoBot = &quot;New&quot;]" DisplayName="¿Donde buscar usuarios si es bot nuevo o viejo? (o cancelar)" sap:VirtualizedContainerService.HintSize="724.8,1017.6" sap2010:WorkflowViewState.IdRef="If_22">
+      <If Condition="[InicioNuevoBot = &quot;New&quot;]" DisplayName="¿Donde buscar usuarios si es bot nuevo o viejo? (o cancelar)" sap:VirtualizedContainerService.HintSize="724.8,892" sap2010:WorkflowViewState.IdRef="If_22">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -827,14 +827,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Bot nuevo =&gt; Usa como base de datos USUARIOS" sap:VirtualizedContainerService.HintSize="515.2,789.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+          <Sequence DisplayName="Bot nuevo =&gt; Usa como base de datos USUARIOS" sap:VirtualizedContainerService.HintSize="515.2,664" sap2010:WorkflowViewState.IdRef="Sequence_82">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="TC - Busca usuarios (general)" sap:VirtualizedContainerService.HintSize="452.8,703.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="TC - Busca usuarios (general)" sap:VirtualizedContainerService.HintSize="452.8,577.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -842,13 +842,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="416,448.8" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                <Sequence sap:VirtualizedContainerService.HintSize="416,323.2" sap2010:WorkflowViewState.IdRef="Sequence_107">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,125.6" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[UserListPath]" />
                   <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtUsers]" DisplayName="Busca usuarios" sap:VirtualizedContainerService.HintSize="353.6,128" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" SheetName="[UserSheetName]" WorkbookPath="[UserListPath]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
